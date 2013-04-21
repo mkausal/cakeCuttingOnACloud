@@ -1,0 +1,7 @@
+/* Objective function */
+max: ;
+
+/* Constraints */
+R1: +[[I@b166b513 >= 5;
+R2: +[[I@b166b523 >= 4;
+R3: +5 [[I@b166b513 <= 0.230769230769;

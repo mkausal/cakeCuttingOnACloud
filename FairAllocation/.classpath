@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/home/debargha/LPSolve/lpsolve55j.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/usr/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/debargha/JARS/jfreechart-1.0.13.jar"/>
+	<classpathentry kind="lib" path="/home/debargha/JARS/jgraph-5.9.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/debargha/JARS/jcommon-1.0.16.jar"/>
+	<classpathentry kind="lib" path="/home/debargha/JARS/Jama-1.0.2.jar"/>
+	<classpathentry kind="lib" path="/home/debargha/JARS/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="/home/debargha/JARS/piccolox.jar"/>
+	<classpathentry kind="lib" path="/home/debargha/JARS/qs.jar"/>
+	<classpathentry kind="lib" path="/home/debargha/JARS/utils.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
