@@ -7,7 +7,7 @@ import lpsolve.*;
 public class DRFAlgorithm {
 	
 	static double x[][]=new double[100][100];
-	static Object data[][]=new Object[4][11];
+	static Object data[][]=new Object[50][100];
 	public ArrayList<Double> runDRF(ArrayList<DemandModel> demandVector,int total_resource,int iteration )
 	{
 		ArrayList<Double> allocationVector = new ArrayList<Double>();
@@ -131,22 +131,57 @@ public class DRFAlgorithm {
 	}
 	
 	public static void main(String[] args) {
-		int max_agents=4;
+		int max_agents=40;
 		int total_resources=1;//scaled down to 1
 		Random generator = new Random();
 		ArrayList<DemandModel> demandVector=new ArrayList<DemandModel>();
 		ArrayList<Double> demand = new ArrayList<Double>();
 		ArrayList<Double> firstfit = new ArrayList<Double>();
 		
-		demandVector.add(new DemandModel(1,0.218818381));
-		demandVector.add(new DemandModel(2,0.262582057));
-		demandVector.add(new DemandModel(3,0.306345733));
-		demandVector.add(new DemandModel(4,0.262582057));
+		demandVector.add(new DemandModel(1,0.02173913));
+		demandVector.add(new DemandModel(2,0.026086957));
+		demandVector.add(new DemandModel(3,0.030434783));
+		demandVector.add(new DemandModel(4,0.02826087));
+		demandVector.add(new DemandModel(5,0.023913043));
+		demandVector.add(new DemandModel(6,0.026086957));
+		demandVector.add(new DemandModel(7,0.02173913));
+		demandVector.add(new DemandModel(8,0.02826087));
+		demandVector.add(new DemandModel(9,0.030434783));
+		demandVector.add(new DemandModel(10,0.02173913));
+		demandVector.add(new DemandModel(11,0.026086957));
+		demandVector.add(new DemandModel(12,0.030434783));
+		demandVector.add(new DemandModel(13,0.02826087));
+		demandVector.add(new DemandModel(14,0.023913043));
+		demandVector.add(new DemandModel(15,0.026086957));
+		demandVector.add(new DemandModel(16,0.02173913));
+		demandVector.add(new DemandModel(17,0.02826087));
+		demandVector.add(new DemandModel(18,0.030434783));
+		demandVector.add(new DemandModel(19,0.02173913));
+		demandVector.add(new DemandModel(20,0.026086957));
+		demandVector.add(new DemandModel(21,0.030434783));
+		demandVector.add(new DemandModel(22,0.02826087));
+		demandVector.add(new DemandModel(23,0.023913043));
+		demandVector.add(new DemandModel(24,0.026086957));
+		demandVector.add(new DemandModel(25,0.02173913));
+		demandVector.add(new DemandModel(26,0.02826087));
+		demandVector.add(new DemandModel(27,0.030434783));
+		demandVector.add(new DemandModel(28,0.02173913));
+		demandVector.add(new DemandModel(29,0.026086957));
+		demandVector.add(new DemandModel(30,0.030434783));
+		demandVector.add(new DemandModel(31,0.02826087));
+		demandVector.add(new DemandModel(32,0.023913043));
+		demandVector.add(new DemandModel(33,0.026086957));
+		demandVector.add(new DemandModel(34,0.02173913));
+		demandVector.add(new DemandModel(35,0.030434783));
+		demandVector.add(new DemandModel(36,0.02173913));
+		demandVector.add(new DemandModel(37,0.027173913));
+		demandVector.add(new DemandModel(38,0.02173913));
+		demandVector.add(new DemandModel(39,0.026086957));
+		demandVector.add(new DemandModel(40,0.02173913));
 		
-		demand.add(demandVector.get(0).getDemand_for_resource());
-		demand.add(demandVector.get(1).getDemand_for_resource());
-		demand.add(demandVector.get(2).getDemand_for_resource());
-		demand.add(demandVector.get(3).getDemand_for_resource());
+		for(int l=0;l<40;l++){
+			demand.add(demandVector.get(l).getDemand_for_resource());
+		}
 		
 		
 		//First fit implementation
@@ -198,13 +233,13 @@ public class DRFAlgorithm {
 			
 			allocation=new DRFAlgorithm().runDRF(demandVector,total_resources,i);
 			System.out.println("firstfit size:"+firstfit.size()+"fair allocation size:"+allocation.size());
-			new GenerateBarChart().generateChart(i,allocation, firstfit, demand);
+			//new GenerateBarChart().generateChart(i,allocation, firstfit, demand);
 		    data[i-2][0]=i;
 			int k=1;
 		    for(int j=0;j<i;j++)
 		    {
-		    	data[i-2][k++]=demandVector.get(j).getDemand_for_resource()*2285.0;
-		    	data[i-2][k++]=allocation.get(j)*2285.0;
+		    	data[i-2][k++]=(int)(demandVector.get(j).getDemand_for_resource()*23000.0);
+		    	data[i-2][k++]=(int)(allocation.get(j)*23000.0);
 		    	System.out.println("data:"+data[i-2][k-1]);
 		    }
 		   
